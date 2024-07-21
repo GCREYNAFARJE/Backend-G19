@@ -54,5 +54,3 @@ GROUP BY status
 ORDER BY count(*) ASC;
 -- En el order by se puede poner el nombre de la columna O el numero de la columna, es decir, si queremos la primera columna sera el 1
 ORDER BY 1 ASC;
-
-
