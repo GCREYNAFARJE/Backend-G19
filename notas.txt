@@ -1,0 +1,4 @@
+pip list                     > lista todas las librerias de python
+pip freeze                   > lista todas las librerias instaladas manualmente de python
+pip install NOMBRE_LIBRERIA  > instala la libreria y si no la encuentra lanza un error 
+python -m 
