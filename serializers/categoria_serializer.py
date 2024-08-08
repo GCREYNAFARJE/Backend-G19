@@ -16,3 +16,4 @@ class ManualCategoriaSerializer(Schema):
     nombre = fields.Str(required=True)
     fechaCreacion = fields.DateTime(format='iso')
     disponibilidad = fields.Boolean()
+
