@@ -1,1 +1,1 @@
-django-admin startproject NOMBRE_PROYECTO > creara
+django-admin startproject NOMBRE_PROYECTO > creara el proyecto de la carpeta 

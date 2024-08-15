@@ -10,7 +10,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
+from os import environ
 from pathlib import Path
+from dotenv import load_dotenv
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -35,8 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    'django.contrib.messages',
+    'django.contrib.messages',  
     'django.contrib.staticfiles',
+    'gestion'
 ]
 
 MIDDLEWARE = [
@@ -73,13 +77,13 @@ WSGI_APPLICATION = 'dulceria.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-from os import environ
+print(environ.get("DB_USER"))
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgrest',
+        'ENGINE': 'django.db.backends.postgresql',
         'HOST': environ.get('DB_HOST'),
-        'NAME': environ.get('DB_NAME'),
-        'PASSWORD': environ.get('DB_PASSWORD'),
+        'NAME':  environ.get('DB_NAME'),
+        'PASSWORD': environ.get('DB_PASSWORD'), 
         'PORT': environ.get('DB_PORT'),
         'USER': environ.get('DB_USER')
     }

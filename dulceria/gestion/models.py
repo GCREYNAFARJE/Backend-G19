@@ -3,7 +3,7 @@ from django.db import models
 # https://docs.djangoproject.com/en/5.1/topics/db/models/
 
 class Categoria(models.Model):
-    id = models.AutoFieldField(primary_Key=True, unique=True, null=False)
+    id = models.AutoField(primary_key=True, unique=True, null=False)
     nombre = models.TextField(null=False)
     habilitado = models.BooleanField(default=True, null=False)
 
@@ -19,7 +19,7 @@ class Golosina(models.Model):
     id = models.AutoField(primary_key=True, unique=True, null=False)
     nombre = models.TextField(null=False)
     precio = models.FloatField(db_column='precio')
-    imagen = models.ImageField(upload_to='/imagenes', null=True)
+    imagen = models.ImageField(upload_to='imagenes', null=True)
     habilitado = models.BooleanField(default=True)
     
 
