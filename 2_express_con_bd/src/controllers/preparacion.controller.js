@@ -44,5 +44,4 @@ export const crearPreparacion = async (req, res) => {
     message: "Preparacion creada existosamente",
     content: nuevaPreparacion,
   });
-  
 };
